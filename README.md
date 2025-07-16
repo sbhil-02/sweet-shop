@@ -1,5 +1,10 @@
 # 🍬 Sweet Shop Management System
 
+![Tests](https://img.shields.io/badge/tests-42%20passed-brightgreen)
+![Built With](https://img.shields.io/badge/built%20with-JavaScript%20%7C%20Node%20%7C%20Jest-yellow)
+![Status](https://img.shields.io/badge/status-Ready%20for%20submission-blue)
+
+
 A fully modular, test-driven sweet inventory management system with role-based access control. Built with HTML, CSS, JavaScript, Node.js, and Jest.
 
 🔐 **Roles:**
