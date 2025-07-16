@@ -1,3 +1,4 @@
+import { Sweet } from '../src/models/Sweet.js';
 import { sweets } from '../src/data/sweetShopData.js';
 import { addSweet } from '../src/inventory/addSweet.js';
 import { deleteSweet } from '../src/inventory/deleteSweet.js';
