@@ -12,16 +12,16 @@ import { purchaseSweet } from './src/operations/purchaseSweet.js';
 const app = express();
 const PORT = 3000;
 
-// ✅ Middleware
+//Middleware
 app.use(cors());
 app.use(express.json());
 
-// ✅ GET all sweets
+//GET all sweets
 app.get('/sweets', (req, res) => {
   res.json(sweets);
 });
 
-// ✅ POST /add - add a new sweet
+//POST /add - add a new sweet
 app.post('/add', (req, res) => {
   try {
     const { id, name, category, price, quantity } = req.body;
@@ -33,7 +33,7 @@ app.post('/add', (req, res) => {
   }
 });
 
-// ✅ DELETE /delete/:id - delete a sweet
+//DELETE /delete/:id - delete a sweet
 app.delete('/delete/:id', (req, res) => {
   try {
     deleteSweet(Number(req.params.id));
@@ -43,7 +43,7 @@ app.delete('/delete/:id', (req, res) => {
   }
 });
 
-// ✅ POST /restock/:id - restock a sweet
+//POST /restock/:id - restock a sweet
 app.post('/restock/:id', (req, res) => {
   try {
     const quantity = Number(req.body.quantity);
@@ -54,7 +54,7 @@ app.post('/restock/:id', (req, res) => {
   }
 });
 
-// ✅ POST /purchase/:id - purchase a sweet
+//POST /purchase/:id - purchase a sweet
 app.post('/purchase/:id', (req, res) => {
   try {
     const quantity = Number(req.body.quantity);
@@ -65,7 +65,7 @@ app.post('/purchase/:id', (req, res) => {
   }
 });
 
-// ✅ Start server
+//Start server
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });

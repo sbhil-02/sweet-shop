@@ -8,6 +8,18 @@ export function initSearchSweet() {
     const min = +document.getElementById('minPrice').value || 0;
     const max = +document.getElementById('maxPrice').value || Infinity;
 
+
+    //Validation: Prevent negative price values
+    if (min < 0 || max < 0) {
+      alert("❌ Price cannot be negative.");
+      return;
+    }
+
+    if (min > max) {
+      alert("❌ Min price cannot be greater than max price.");
+      return;
+    }
+
     try {
       const res = await fetch('http://localhost:3000/sweets');
       const sweets = await res.json();
