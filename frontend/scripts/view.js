@@ -1,4 +1,5 @@
 let allSweets = []; // new variable to store fetched sweets
+import { getRole } from './main.js';
 
 export async function initViewSweets() {
   const tbody = document.getElementById('sweetTableBody');
@@ -32,6 +33,7 @@ export async function initViewSweets() {
 }
 
 function renderTable(data) {
+  const role = getRole();
   const tbody = document.getElementById('sweetTableBody');
   if (data.length === 0) {
     tbody.innerHTML = '<tr><td colspan="6">No sweets found.</td></tr>';
@@ -41,21 +43,31 @@ function renderTable(data) {
   tbody.innerHTML = '';
   data.forEach(sweet => {
     const row = document.createElement('tr');
+    let actions = '';
+
+    if (role === 'user') {
+      actions += `<button onclick="purchaseSweet(${sweet.id})">🛒</button>`;
+    }
+
+    if (role === 'owner') {
+      actions += `
+        <button onclick="restockSweet(${sweet.id})">➕</button>
+        <button onclick="deleteSweet(${sweet.id})">❌</button>
+      `;
+    }
+
     row.innerHTML = `
       <td>${sweet.id}</td>
       <td>${sweet.name}</td>
       <td>${sweet.category}</td>
       <td>${sweet.price}</td>
       <td>${sweet.quantity}</td>
-      <td>
-        <button onclick="purchaseSweet(${sweet.id})">🛒</button>
-        <button onclick="restockSweet(${sweet.id})">➕</button>
-        <button onclick="deleteSweet(${sweet.id})">❌</button>
-      </td>
+      <td>${actions}</td>
     `;
     tbody.appendChild(row);
   });
 }
+
 
 
 // Function to restock a sweet

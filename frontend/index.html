@@ -4,21 +4,18 @@
   <meta charset="UTF-8" />
   <title>Sweet Shop Management</title>
   <link rel="stylesheet" href="style/main.css" />
-<link rel="stylesheet" id="page-style" />
-
+  <link rel="stylesheet" id="page-style" />
 </head>
 <body>
-<nav>
-  <h1>🍬 Sweet Shop</h1>
-  <button onclick="loadRoute('add')">Add Sweet</button>
-  <button onclick="loadRoute('view')">View Sweets</button>
-  <button onclick="loadRoute('search')">Search</button> 
-</nav>
-
-
+  <nav>
+    <h1>🍬 Sweet Shop</h1>
+    <button id="addBtn" onclick="loadRoute('add')">Add Sweet</button>
+    <button onclick="loadRoute('view')">View Sweets</button>
+    <button onclick="loadRoute('search')">Search</button>
+  </nav>
 
   <main id="content">
-    <!-- Feature-specific HTML will be loaded here -->
+    <!-- Pages like login/view/add will be dynamically loaded here -->
   </main>
 
   <script type="module" src="scripts/main.js"></script>

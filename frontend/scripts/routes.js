@@ -1,8 +1,9 @@
 import { initAddSweet } from './add.js';
 import { initViewSweets } from './view.js';
-import { initSearchSweet } from './search.js'; 
+import { initSearchSweet } from './search.js';
+import { initLogin } from './login.js';
 
-export async function loadRoute(route) {
+export async function loadPage(route) {
   const res = await fetch(`pages/${route}.html`);
   const html = await res.text();
   document.getElementById('content').innerHTML = html;
@@ -11,5 +12,6 @@ export async function loadRoute(route) {
 
   if (route === 'add') initAddSweet();
   if (route === 'view') initViewSweets();
-  if (route === 'search') initSearchSweet(); 
+  if (route === 'search') initSearchSweet();
+  if (route === 'login') initLogin();
 }
