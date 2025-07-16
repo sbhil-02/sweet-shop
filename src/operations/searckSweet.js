@@ -14,6 +14,10 @@ export function searchByCategory(category) {
 }
 
 export function searchByPriceRange(min, max) {
+  if (min < 0 || max < 0 || min > max) {
+    throw new Error("Invalid price range");
+  }
+
   return sweets.filter(sweet =>
     sweet.price >= min && sweet.price <= max
   );
