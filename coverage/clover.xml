@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1752680386278" clover="3.2.0">
+  <project timestamp="1752680386278" name="All files">
+    <metrics statements="52" coveredstatements="52" conditionals="39" coveredconditionals="39" methods="18" coveredmethods="18" elements="109" coveredelements="109" complexity="0" loc="52" ncloc="52" packages="4" files="9" classes="9"/>
+    <package name="data">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="sweetShopData.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\data\sweetShopData.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="inventory">
+      <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
+      <file name="addSweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\inventory\addSweet.js">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="6" count="82" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="85" type="stmt"/>
+        <line num="12" count="81" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="80" type="stmt"/>
+      </file>
+      <file name="deleteSweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\inventory\deleteSweet.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+      <file name="getAllSweets.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\inventory\getAllSweets.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
+      </file>
+      <file name="restockSweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\inventory\restockSweet.js">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="4" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="models">
+      <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <file name="Sweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\models\Sweet.js">
+        <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="3" count="85" type="cond" truecount="7" falsecount="0"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="81" type="stmt"/>
+        <line num="7" count="81" type="stmt"/>
+        <line num="8" count="81" type="stmt"/>
+        <line num="9" count="81" type="stmt"/>
+        <line num="10" count="81" type="stmt"/>
+      </file>
+    </package>
+    <package name="operations">
+      <metrics statements="27" coveredstatements="27" conditionals="22" coveredconditionals="22" methods="10" coveredmethods="10"/>
+      <file name="purchaseSweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\operations\purchaseSweet.js">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="5" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="16" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+      </file>
+      <file name="searchSweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\operations\searchSweet.js">
+        <metrics statements="8" coveredstatements="8" conditionals="7" coveredconditionals="7" methods="6" coveredmethods="6"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="17" count="6" type="cond" truecount="5" falsecount="0"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="12" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="sortSweet.js" path="C:\Users\herma\Desktop\sweet-shop-management\src\operations\sortSweet.js">
+        <metrics statements="11" coveredstatements="11" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="9" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="26" count="5" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>
