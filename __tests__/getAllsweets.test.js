@@ -30,4 +30,15 @@ describe('getAllSweets()', () => {
     expect(all).toEqual([]);
   });
 
+// Test to ensure it returns a new array (not reference to original)
+  test('should return a new array (not reference to original)', () => {
+    const sweet = new Sweet(1, 'Barfi', 'Milk-Based', 20, 5);
+    addSweet(sweet);
+
+    const all = getAllSweets();
+    all.pop();  // mutate the returned array
+
+    expect(sweets.length).toBe(1); // original should remain unchanged
+  });
+
 });
