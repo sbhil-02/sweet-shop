@@ -1,4 +1,0 @@
-{
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "jest.jestCommandLine": "npm test"
-}
