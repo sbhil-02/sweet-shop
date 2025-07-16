@@ -1,38 +1,62 @@
+let allSweets = []; // new variable to store fetched sweets
+
 export async function initViewSweets() {
-  const tbody = document.getElementById("sweetTableBody");
+  const tbody = document.getElementById('sweetTableBody');
   tbody.innerHTML = '<tr><td colspan="6">Loading...</td></tr>';
 
   try {
-    const res = await fetch("http://localhost:3000/sweets");
-    const sweets = await res.json();
+    const res = await fetch('http://localhost:3000/sweets');
+    allSweets = await res.json(); // ✅ save for sorting
 
-    if (sweets.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="6">No sweets available.</td></tr>';
-      return;
-    }
-
-    tbody.innerHTML = "";
-    for (const sweet of sweets) {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-  <td>${sweet.id}</td>
-  <td>${sweet.name}</td>
-  <td>${sweet.category}</td>
-  <td>${sweet.price}</td>
-  <td>${sweet.quantity}</td>
-  <td>
-    <button onclick="purchaseSweet(${sweet.id})">🛒</button>
-    <button onclick="restockSweet(${sweet.id})">➕</button>
-    <button onclick="deleteSweet(${sweet.id})">❌</button>
-  </td>
-`;
-
-      tbody.appendChild(row);
-    }
+    renderTable(allSweets);
   } catch (err) {
     tbody.innerHTML = '<tr><td colspan="6">Error loading sweets.</td></tr>';
   }
+
+  // ✅ Handle sort button
+  document.getElementById('sortBtn').onclick = () => {
+    const key = document.getElementById('sortKey').value;
+    const order = document.getElementById('sortOrder').value;
+    const sorted = [...allSweets].sort((a, b) => {
+      if (typeof a[key] === 'string') {
+        return order === 'asc'
+          ? a[key].localeCompare(b[key])
+          : b[key].localeCompare(a[key]);
+      }
+      return order === 'asc'
+        ? a[key] - b[key]
+        : b[key] - a[key];
+    });
+    renderTable(sorted);
+  };
 }
+
+function renderTable(data) {
+  const tbody = document.getElementById('sweetTableBody');
+  if (data.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6">No sweets found.</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = '';
+  data.forEach(sweet => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${sweet.id}</td>
+      <td>${sweet.name}</td>
+      <td>${sweet.category}</td>
+      <td>${sweet.price}</td>
+      <td>${sweet.quantity}</td>
+      <td>
+        <button onclick="purchaseSweet(${sweet.id})">🛒</button>
+        <button onclick="restockSweet(${sweet.id})">➕</button>
+        <button onclick="deleteSweet(${sweet.id})">❌</button>
+      </td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
 
 // Function to restock a sweet
 window.restockSweet = async function (id) {

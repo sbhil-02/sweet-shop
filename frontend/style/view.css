@@ -46,3 +46,16 @@ table button:nth-child(3) {
 table button:hover {
   opacity: 0.9;
 }
+
+.sort-controls {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.sort-controls select, .sort-controls button {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+}

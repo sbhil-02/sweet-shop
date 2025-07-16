@@ -1,5 +1,20 @@
 <section class="sweet-list">
   <h2>All Sweets</h2>
+  <div class="sort-controls">
+  <select id="sortKey">
+    <option value="name">Sort by Name</option>
+    <option value="category">Sort by Category</option>
+    <option value="price">Sort by Price</option>
+  </select>
+
+  <select id="sortOrder">
+    <option value="asc">⬆ Ascending</option>
+    <option value="desc">⬇ Descending</option>
+  </select>
+
+  <button id="sortBtn">🔃 Sort</button>
+</div>
+
   <table>
 <thead>
   <tr>
