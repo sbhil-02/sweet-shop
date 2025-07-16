@@ -23,6 +23,7 @@ export async function initViewSweets() {
   <td>
     <button onclick="purchaseSweet(${sweet.id})">🛒</button>
     <button onclick="restockSweet(${sweet.id})">➕</button>
+    <button onclick="deleteSweet(${sweet.id})">❌</button>
   </td>
 `;
 
@@ -79,6 +80,27 @@ window.purchaseSweet = async function (id) {
     if (res.ok) {
       alert("✅ Purchase successful!");
       initViewSweets(); // reload updated table
+    } else {
+      alert("❌ Error: " + data.error);
+    }
+  } catch (err) {
+    alert("❌ Network error");
+  }
+};
+
+// Function to delete a sweet
+window.deleteSweet = async function (id) {
+  if (!confirm("Are you sure you want to delete this sweet?")) return;
+
+  try {
+    const res = await fetch(`http://localhost:3000/delete/${id}`, {
+      method: 'DELETE'
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert("✅ Sweet deleted!");
+      initViewSweets();
     } else {
       alert("❌ Error: " + data.error);
     }

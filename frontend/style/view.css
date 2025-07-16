@@ -39,6 +39,10 @@ table button:nth-child(2) {
   background-color: #28a745; /* Restock */
 }
 
+table button:nth-child(3) {
+  background-color: #dc3545; /* Delete */
+}
+
 table button:hover {
   opacity: 0.9;
 }
