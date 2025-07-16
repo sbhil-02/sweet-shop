@@ -1,0 +1,22 @@
+.sweet-list {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.sweet-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sweet-list th, .sweet-list td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.sweet-list th {
+  background-color: #f0f0f0;
+}
