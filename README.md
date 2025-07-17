@@ -8,11 +8,15 @@
 ### Search sweet 
 ![Sweet search](./Screenshot%202025-07-17%20173813.png)
 
-### sweet search result
+### sweet search page
 ![Sweet s](./Screenshot%202025-07-17%20173922.png)
 
-###  All  sweet
-![All Sweet](./Screenshot%202025-07-17%20173736.png) 
+### Sweet View page
+![Sweet View](./Screenshot%202025-07-17%20173736.png) 
+
+### user-add Sweet Stock
+![All Sweet](./Screenshot%202025-07-17%20174017.png) 
+
 
 
 
