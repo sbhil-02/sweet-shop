@@ -65,7 +65,7 @@ app.post('/purchase/:id', (req, res) => {
   }
 });
 
-//Start server
+//Starting  server
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });

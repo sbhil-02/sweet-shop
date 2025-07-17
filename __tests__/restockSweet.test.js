@@ -9,6 +9,7 @@ beforeEach(() => {
 });
 
 // Test suite for restockSweet function
+
 describe('restockSweet()', () => {
   test('should increase the quantity of an existing sweet', () => {
     const sweet = new Sweet(1, 'Gulab Jamun', 'Milk-Based', 10, 5);
@@ -19,7 +20,7 @@ describe('restockSweet()', () => {
     expect(sweets[0].quantity).toBe(15);
   });
 
-// Test to ensure it throws an error if the sweet does not exist
+// Test to ensure it throws an error if the sweet does not exist!
   test('should handle multiple restocks correctly', () => {
     const sweet = new Sweet(2, 'Kaju Katli', 'Nut-Based', 40, 10);
     addSweet(sweet);

@@ -56,6 +56,7 @@ function renderTable(data) {
       `;
     }
 
+    
     row.innerHTML = `
       <td>${sweet.id}</td>
       <td>${sweet.name}</td>

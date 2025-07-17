@@ -4,6 +4,7 @@ import { initSearchSweet } from './search.js';
 import { initLogin } from './login.js';
 
 // Import functions to initialize each page
+
 export async function loadPage(route) {
   const res = await fetch(`pages/${route}.html`);
   const html = await res.text();

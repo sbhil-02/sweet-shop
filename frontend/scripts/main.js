@@ -27,6 +27,7 @@ export function loadRoute(route) {
   loadPage(route);
 }
 
+
 // Hide Add button on initial load
 document.addEventListener('DOMContentLoaded', () => {
   const addBtn = document.getElementById('addBtn');

@@ -19,7 +19,7 @@ describe('addSweet()', () => {
   });
 
 // test-3
-// Test to ensure it throws an error if a sweet with the same ID already exists
+// Test to ensure it throws an error if a sweet with the same ID already exists!
   test('should throw error if sweet with same ID already exists', () => {
     const sweet1 = new Sweet(1, 'Kaju Katli', 'Nut-Based', 50, 20);
     const sweet2 = new Sweet(1, 'Gulab Jamun', 'Milk-Based', 20, 30);
@@ -29,6 +29,7 @@ describe('addSweet()', () => {
 
   // test-4
   // Test to ensure it handles adding multiple valid sweets
+
   test('should handle adding multiple valid sweets', () => {
     const sweet1 = new Sweet(1, 'Barfi', 'Milk-Based', 30, 10);
     const sweet2 = new Sweet(2, 'Halwa', 'Vegetable-Based', 40, 5);
@@ -40,6 +41,7 @@ describe('addSweet()', () => {
 
 // test-5
 // Test to ensure it throws an error for invalid sweet details
+
   describe('Sweet Constructor Validations', () => {
   const invalidInputs = [
     [null, 'Valid Name', 'Category', 10, 10],

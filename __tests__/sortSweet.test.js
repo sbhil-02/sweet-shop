@@ -50,7 +50,8 @@ describe('sortSweet()', () => {
     expect(sorted).not.toBe(sweets);
   });
 
-// Test to ensure it throws an error if the sort key is invalid
+// Test to ensure it throws an error if the sort key is invalid!
+
   test('should throw error on invalid sort key', () => {
     expect(() => sortBy('flavor')).toThrow("Invalid sort key");
   });

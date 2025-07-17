@@ -13,6 +13,7 @@ beforeEach(() => {
 });
 
 // Test suite for searchSweet function
+
 describe('searchSweet()', () => {
   beforeEach(() => {
     addSweet(new Sweet(1, 'Kaju Katli', 'Nut-Based', 50, 10));
@@ -21,7 +22,8 @@ describe('searchSweet()', () => {
     addSweet(new Sweet(4, 'Rasgulla', 'Milk-Based', 35, 15));
   });
 
-  // 🔍 Name Search
+  // Name Search of sweet
+
   test('should return sweets matching name (case insensitive)', () => {
     const result = searchByName('gulab');
     expect(result.length).toBe(1);

@@ -19,7 +19,7 @@ describe('deleteSweet()', () => {
     expect(sweets.length).toBe(0);
   });
 
-  // Test to ensure it throws an error if the sweet does not exist
+  // Test to ensure it throws an error if the sweet does not exist!
   test('should not delete anything if wrong ID is given', () => {
     const sweet = new Sweet(1, 'Halwa', 'Veg-Based', 40, 5);
     addSweet(sweet);
@@ -28,7 +28,8 @@ describe('deleteSweet()', () => {
     expect(sweets.length).toBe(1);
   });
 
-  // Test to ensure it handles deleting multiple sweets correctly
+  // Test to ensure it handles deleting multiple sweets correctly or not
+
   test('should handle deleting multiple sweets one after another', () => {
     const sweet1 = new Sweet(1, 'Gulab Jamun', 'Milk-Based', 10, 20);
     const sweet2 = new Sweet(2, 'Rasgulla', 'Milk-Based', 12, 25);

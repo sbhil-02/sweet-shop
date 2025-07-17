@@ -10,6 +10,7 @@ export function initSearchSweet() {
 
 
     //Validation: Prevent negative price values
+    
     if (min < 0 || max < 0) {
       alert("❌ Price cannot be negative.");
       return;

@@ -7,6 +7,7 @@ export function initLogin() {
     
     const pwd = document.getElementById('password').value;
     const user=document.getElementById('username').value;
+    
     if ( user==='user' && pwd === 'user123') {
       setRole('user');
       window.loadRoute('view');

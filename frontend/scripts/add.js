@@ -1,5 +1,7 @@
 export function initAddSweet() {
+  
   const form = document.getElementById('addSweetForm');
+
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
