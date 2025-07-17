@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sweet Shop Management</title>
-  <link rel="stylesheet" href="style/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" id="page-style" />
 </head>
-<body>
-  <nav>
-    <h1>🍬 Sweet Shop</h1>
-    <button id="addBtn" onclick="loadRoute('add')">Add Sweet</button>
-    <button onclick="loadRoute('view')">View Sweets</button>
-    <button onclick="loadRoute('search')">Search</button>
+<body class="bg-gradient-to-br from-pink-100 to-yellow-100 min-h-screen font-sans">
+
+  <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-pink-900"> Sweet Shop</h1>
+    <div class="flex gap-4">
+      <button onclick="loadRoute('add')" class="bg-pink-800 hover:bg-pink-900 text-white font-medium px-4 py-2 rounded-lg shadow transition">
+        Add Sweet
+      </button>
+      <button onclick="loadRoute('view')" class="bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-4 py-2 rounded-lg shadow transition">
+        View Sweets
+      </button>
+      <button onclick="loadRoute('search')" class="bg-purple-500 hover:bg-purple-600 text-white font-medium px-4 py-2 rounded-lg shadow transition">
+        Search
+      </button>
+    </div>
   </nav>
 
-  <main id="content">
+  <main id="content" class="p-6">
     <!-- Pages like login/view/add will be dynamically loaded here -->
   </main>
 

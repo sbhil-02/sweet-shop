@@ -4,13 +4,13 @@ export function initLogin() {
   const form = document.getElementById('loginForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     const pwd = document.getElementById('password').value;
-
-    if (pwd === 'user123') {
+    const user=document.getElementById('username').value;
+    if ( user==='user' && pwd === 'user123') {
       setRole('user');
       window.loadRoute('view');
-    } else if (pwd === 'owner123') {
+    } else if (user==='owner' && pwd === 'owner123') {
       setRole('owner');
       window.loadRoute('view');
     } else {

@@ -1,11 +1,49 @@
-<section class="add-form">
-  <h2>Add Sweet</h2>
-  <form id="addSweetForm">
-    <input type="number" id="id" placeholder="ID" required />
-    <input type="text" id="name" placeholder="Name" required />
-    <input type="text" id="category" placeholder="Category" required />
-    <input type="number" id="price" placeholder="Price" required />
-    <input type="number" id="quantity" placeholder="Quantity" required />
-    <button type="submit">➕ Add</button>
-  </form>
+
+<section class="flex justify-center items-center min-h-[calc(100vh-80px)] p-6">
+  <div class="bg-white shadow-xl rounded-xl p-8 w-full max-w-lg">
+    <h2 class="text-2xl font-bold text-center text-pink-900 mb-6">➕ Add Sweet</h2>
+    <form id="addSweetForm" class="flex flex-col gap-4">
+      <input 
+        type="number" 
+        id="id" 
+        placeholder="Sweet ID" 
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-900" 
+        required 
+      />
+      <input 
+        type="text" 
+        id="name" 
+        placeholder="Sweet Name" 
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-900" 
+        required 
+      />
+      <input 
+        type="text" 
+        id="category" 
+        placeholder="Category" 
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-900" 
+        required 
+      />
+      <input 
+        type="number" 
+        id="price" 
+        placeholder="Price (₹)" 
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-900" 
+        required 
+      />
+      <input 
+        type="number" 
+        id="quantity" 
+        placeholder="Quantity" 
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-900" 
+        required 
+      />
+      <button 
+        type="submit" 
+        class="bg-pink-800 hover:bg-pink-900 text-white font-semibold py-3 rounded-lg shadow transition"
+      >
+        ➕ Add Sweet
+      </button>
+    </form>
+  </div>
 </section>

@@ -1,28 +1,50 @@
-<section class="sweet-list">
-  <h2>All Sweets</h2>
-  <div class="sort-controls">
-  <select id="sortKey">
-    <option value="name">Sort by Name</option>
-    <option value="category">Sort by Category</option>
-    <option value="price">Sort by Price</option>
-  </select>
 
-  <select id="sortOrder">
-    <option value="asc">⬆ Ascending</option>
-    <option value="desc">⬇ Descending</option>
-  </select>
+<section class="min-h-[calc(100vh-80px)] p-6 flex flex-col items-center bg-gray-100">
+  <div class="w-full max-w-6xl bg-white p-8 shadow-2xl rounded-2xl">
+    <h2 class="text-3xl font-bold text-yellow-600 text-center mb-6">🍬 All Sweets</h2>
 
-  <button id="sortBtn">🔃 Sort</button>
-</div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+      <div class="flex flex-wrap gap-4">
+        <select
+          id="sortKey"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        >
+          <option value="name">Sort by Name</option>
+          <option value="category">Sort by Category</option>
+          <option value="price">Sort by Price</option>
+        </select>
 
-  <table>
-<thead>
-  <tr>
-    <th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Quantity</th><th>Actions</th>
-  </tr>
-</thead>
+        <select
+          id="sortOrder"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        >
+          <option value="asc">⬆ Ascending</option>
+          <option value="desc">⬇ Descending</option>
+        </select>
+      </div>
 
+      <button
+        id="sortBtn"
+        class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-2 rounded-xl shadow-md transition duration-300"
+      >
+        🔃 Sort
+      </button>
+    </div>
 
-    <tbody id="sweetTableBody"></tbody>
-  </table>
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto border border-yellow-300 shadow rounded-lg">
+        <thead class="bg-yellow-100 text-yellow-700">
+          <tr>
+            <th class="px-4 py-2 border border-yellow-300">ID</th>
+            <th class="px-4 py-2 border border-yellow-300">Name</th>
+            <th class="px-4 py-2 border border-yellow-300">Category</th>
+            <th class="px-4 py-2 border border-yellow-300">Price</th>
+            <th class="px-4 py-2 border border-yellow-300">Quantity</th>
+            <th class="px-4 py-2 border border-yellow-300">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="sweetTableBody" class="text-center bg-white"></tbody>
+      </table>
+    </div>
+  </div>
 </section>

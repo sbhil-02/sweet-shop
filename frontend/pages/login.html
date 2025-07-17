@@ -1,7 +1,31 @@
-<section class="login-form">
-  <h2>Login to Sweet Shop</h2>
-  <form id="loginForm">
-    <input type="password" id="password" placeholder="Enter password..." required />
-    <button type="submit">🔐 Login</button>
-  </form>
+
+
+<section class="flex justify-center items-center min-h-[calc(100vh-80px)] p-6">
+  <div class="bg-white shadow-xl rounded-xl p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center text-pink-750 mb-6"> Login to Sweet Shop</h2>
+    <form id="loginForm" class="flex flex-col gap-4">
+      <input 
+        type="text" 
+        id="username" 
+        placeholder="Username"
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-750"
+        required 
+      />
+      <input 
+        type="password" 
+        id="password" 
+        placeholder="Enter password..."
+        class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-750"
+        required 
+      />
+      <button 
+        type="submit"
+        class="bg-emerald-700 hover:bg-emerald-900 text-white font-semibold py-3 rounded-lg shadow transition"
+      >
+        🔐 Login
+      </button>
+      <p class="px-4 py-3 text-xl flex justify-center text-crimson ">user name: "user" <br>
+        password: "user123"</p>
+    </form>
+  </div>
 </section>
