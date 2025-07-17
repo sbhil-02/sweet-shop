@@ -5,8 +5,8 @@
 ### Add sweet page
 ![Sweet Add](./Screenshot%202025-07-17%20173751.png)
 
-### All sweet 
-![Sweet search](./Screenshot%202025-07-17%20173736.png)
+### Search sweet 
+![Sweet search](./Screenshot%202025-07-17%20173813.png)
 
-### 
-![Sweet search](./Screenshot%202025-07-17%20173736.png)
+###  All  sweet
+![Sweet search](./Screenshot%202025-07-17%20173736.png) 
