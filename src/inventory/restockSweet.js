@@ -1,5 +1,6 @@
 import { sweets } from '../data/sweetShopData.js';
 
+// for restock!
 export function restockSweet(id, quantity) {
   if (quantity <= 0) {
     throw new Error("Invalid restock quantity");

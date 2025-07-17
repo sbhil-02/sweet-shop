@@ -1,6 +1,7 @@
 import { sweets } from '../data/sweetShopData.js';
 
-// This function deletes a sweet from the sweets array by its ID.
+// This function deletes a sweet from the sweets array by its ID.!
+
 export function deleteSweet(id) {
   const index = sweets.findIndex(s => s.id === id);
   if (index === -1) {
